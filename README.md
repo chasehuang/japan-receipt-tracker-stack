@@ -269,14 +269,13 @@ npm run dev    # http://localhost:3000
 
 ## 未來可改善
 
-1. **收據照片沒有保存** — 掃描後圖片就丟了，如果 Gemini 辨識錯誤想回頭對照原圖沒辦法。可以存到 Notion 附件或 Cloudflare R2
-2. **圖片沒有壓縮** — 手機拍的收據照片可能 3-5MB，直接 base64 傳給 Gemini。加 client-side resize（壓到 1024px 寬）可以加快上傳，辨識效果不會差
-3. **沒有 Auth** — 任何人知道 URL 都能用。個人使用沒問題，但分享給別人用的話需要加 password middleware 或 Zeabur Basic Auth
+1. **收據照片沒有保存**：掃描後圖片就丟了，如果 Gemini 辨識錯誤想回頭對照原圖沒辦法。可以存到 Notion 附件或 Cloudflare R2
+2. **圖片沒有壓縮**：手機拍的收據照片可能 3-5MB，直接 base64 傳給 Gemini。加 client-side resize（壓到 1024px 寬）可以加快上傳，辨識效果不會差
+3. **沒有 Auth**：任何人知道 URL 都能用。個人使用沒問題，但分享給別人用的話需要加密碼保護
 
 ## 關鍵學習
 
-1. **Prompt Engineering 是最花時間的** — 日本稅制的邊界情況很多，prompt 迭代了十幾版
-2. **Gemini Flash 免費額度很夠** — 旅行場景的用量根本用不完
-3. **Notion 當 DB 意外好用** — 有 GUI 可以手動修正 AI 辨識錯誤，比傳統 DB 方便
-4. **PWA 是旅行 App 的最佳選擇** — 不用上架 App Store，掃 QR code 就能用
-5. **不需要 UI Library** — 6 個頁面用 Tailwind 手刻更快，也更輕量
+1. **Prompt Engineering 是最花時間的**：日本稅制的邊界情況很多，收據顯示方式也不一樣，修改了好多次
+2. **Gemini Flash 免費額度很夠**：旅行場景的用量根本用不完
+3. **Notion 當 DB 意外好用**：有 GUI 可以手動修正 AI 辨識錯誤，比傳統 DB 方便
+4. **PWA**：不用上架 App Store，無需下載，有網路就能開啟網頁
